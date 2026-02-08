@@ -438,34 +438,55 @@
     </main>
 
     <footer class="site-footer">
-      <span>@2026 Harlan. Developed entirely with Cursor & Trae, taking two days in total and continuously updating.</span>
+      <span>@2026 Harlan. Developed entirely with Cursor & Trae & CodeBuddy, taking two days in total and continuously updating.</span>
     </footer>
   </div>
 
   <script src="main.js" defer></script>
     <script>
+      // 移动端布局调整:将个人信息板块移动到"你好"板块之后
+      function adjustMobileLayout() {
+        if (window.innerWidth <= 900) {
+          const leftContent = document.querySelector('.layout-home__left');
+          const profilePanel = document.querySelector('.layout-home__right .panel--profile');
+
+          if (leftContent && profilePanel && !profilePanel.classList.contains('moved')) {
+            // 将个人信息面板插入到左侧第二个位置(在"你好"面板之后)
+            const introPanel = leftContent.querySelector('.panel--soft');
+            if (introPanel) {
+              introPanel.after(profilePanel);
+              profilePanel.classList.add('moved');
+            }
+          }
+        }
+      }
+
+      // 页面加载时调整布局
+      window.addEventListener('load', adjustMobileLayout);
+      window.addEventListener('resize', adjustMobileLayout);
+
       // 显示二维码弹窗
       function showQRCode(type) {
         const modal = document.getElementById('qrcodeModal');
         const qrcodeImage = document.getElementById('qrcodeImage');
-        
+
         // 根据类型设置二维码图片路径
         if (type === 'QQ') {
           qrcodeImage.src = 'images/QQ.jpg';
         } else if (type === 'WeChat') {
           qrcodeImage.src = 'images/Wechat.jpg';
         }
-        
+
         // 显示弹窗
         modal.style.display = 'flex';
       }
-      
+
       // 关闭二维码弹窗
       function closeQRCode() {
         const modal = document.getElementById('qrcodeModal');
         modal.style.display = 'none';
       }
-      
+
       // 点击弹窗外部关闭
       window.onclick = function(event) {
         const modal = document.getElementById('qrcodeModal');
