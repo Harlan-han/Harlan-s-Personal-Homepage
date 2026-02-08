@@ -888,6 +888,20 @@ body.theme-night .theme-option:hover {
   .layout-home {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  /* 在移动端,让个人信息板块显示在第二个位置 */
+  .layout-home__left {
+    order: 1;
+  }
+
+  .layout-home__right {
+    order: 2;
+  }
+
+  /* 个人信息板块在右侧中显示在第一个位置 */
+  .layout-home__right > .panel--profile {
+    order: -1;
+  }
 }
 
 .layout-home__left,
