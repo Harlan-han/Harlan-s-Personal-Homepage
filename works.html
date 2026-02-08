@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>作品集 · Harlan的个人空间</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-scandi">
+  <div class="app-shell app-shell--inner">
+    <header class="top-nav">
+      <a class="top-nav__brand" href="index.html">
+        <span class="top-nav__logo-dot"></span>
+        <span class="top-nav__logo-text">My Space</span>
+      </a>
+      <nav class="top-nav__links">
+        <a href="space.html" class="top-nav__link">首页</a>
+        <a href="works.html" class="top-nav__link top-nav__link--active">作品</a>
+        <a href="certificates.html" class="top-nav__link">证书</a>
+        <a href="share.html" class="top-nav__link">分享</a>
+      </nav>
+      <div class="top-nav__theme">
+          <div class="theme-selector">
+            <button id="theme-toggle" class="theme-toggle">
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__text">切换主题</span>
+              <span class="theme-toggle__arrow">▼</span>
+            </button>
+            <div class="theme-dropdown" id="theme-dropdown">
+              <div class="theme-option" data-theme="">
+                <span class="theme-option__icon">🌞</span>
+                <span class="theme-option__text">简约主题</span>
+              </div>
+              <div class="theme-option" data-theme="theme-day">
+                <span class="theme-option__icon">☀️</span>
+                <span class="theme-option__text">白天主题</span>
+              </div>
+              <div class="theme-option" data-theme="theme-night">
+                <span class="theme-option__icon">🌙</span>
+                <span class="theme-option__text">黑夜主题</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="top-nav__clock" id="nav-clock">--</div>
+    </header>
+
+    <main class="page">
+      <header class="page-header">
+        <div>
+          <h1 class="page-header__title" data-i18n="works.title">作品集</h1>
+          <p class="page-header__subtitle" data-i18n="works.subtitle">
+            把灵感变成可以被点开的链接，这里是我所有创造力的陈列室。
+          </p>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title" data-i18n="works.aiApps">AI应用项目</h2>
+          <p class="section__hint" data-i18n="works.aiAppsHint">放我最得意的AI产品和实验项目。</p>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="card card--tall">
+            <div class="card__cover" style="background-image: url('images/yanxing.png'); background-size: cover; background-position: center;"></div>
+            <div class="card__body">
+              <h3 class="card__title">言形—AI语言风格转换工具</h3>
+              <p class="card__meta">豆包-应用生成创作挑战赛—银奖 / 2025.11-2025.12</p>
+              <p class="card__desc">
+                针对职场黑话难懂、表达场景适配难等痛点，独立开发的AI语言风格转换工具，实现六个常见双向语言风格切换场景，终获赛事银奖。
+              </p>
+              <div class="card__footer">
+                <a href="https://www.doubao.com/code/launch/preview/130715974914" target="_blank" rel="noreferrer" class="card__link">查看项目 →</a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--tall">
+            <div class="card__cover" style="background-image: url('images/WePin.png'); background-size: cover; background-position: center;"></div>
+            <div class="card__body">
+              <h3 class="card__title">WePin（微拼）—校园轻社交互助平台</h3>
+              <p class="card__meta">美团NoCode"AI校园创造营"—优秀作品奖 / 2025.09-2025.10</p>
+              <p class="card__desc">
+                针对校园中"拼单难、交友场景有限"的痛点，使用美团NoCode平台独立开发的校园轻社交产品，实现基于邮箱的用户登录系统和订单创建功能。
+              </p>
+              <div class="card__footer">
+                <a href="https://harlan-pinpin.nocode.host/" target="_blank" rel="noreferrer" class="card__link">查看项目 →</a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--tall">
+            <div class="card__cover" style="background-image: url('images/yicexing.png'); background-size: cover; background-position: center;"></div>
+            <div class="card__body">
+              <h3 class="card__title">益策星——公益活动策划案生成工具</h3>
+              <p class="card__meta">公益项目 / 2025.11-2025.12</p>
+              <p class="card__desc">
+                一款专为留守儿童公益活动设计的轻量化、模板化策划案生成工具。旨在降低策划案撰写门槛，标准化内容框架，帮助用户快速产出专业、有吸引力的赞助策划案，高效对接企业赞助资源，最终服务于留守儿童公益项目的落地。
+              </p>
+              <div class="card__footer">
+                <a href="https://www.doubao.com/code/launch/preview/130717026306" target="_blank" rel="noreferrer" class="card__link">查看项目 →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title" data-i18n="works.aiArt">AI绘画</h2>
+          <p class="section__hint" data-i18n="works.aiArtHint">探索AI在艺术创作领域的无限可能。</p>
+        </div>
+        <p style="text-align: center; color: rgba(126, 166, 200, 0.6); font-size: 1.1rem; padding: 2rem 0;">
+          正在探索中，敬请期待我的第一个作品！
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title" data-i18n="works.aiVideo">AI视频</h2>
+          <p class="section__hint" data-i18n="works.aiVideoHint">用AI技术创造引人入胜的视频内容。</p>
+        </div>
+        <p style="text-align: center; color: rgba(126, 166, 200, 0.6); font-size: 1.1rem; padding: 2rem 0;">
+          正在探索中，敬请期待我的第一个作品！
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>你可以在这里不断补充和更新你的作品。</span>
+    </footer>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

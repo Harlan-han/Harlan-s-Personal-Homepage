@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的个人空间</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-scandi">
+  <div class="app-shell">
+    <header class="top-nav">
+      <a class="top-nav__brand" href="index.html">
+        <span class="top-nav__logo-dot"></span>
+        <span class="top-nav__logo-text">My Space</span>
+      </a>
+      <nav class="top-nav__links">
+        <a href="space.html" class="top-nav__link top-nav__link--active">首页</a>
+        <a href="works.html" class="top-nav__link">作品</a>
+        <a href="certificates.html" class="top-nav__link">证书</a>
+        <a href="share.html" class="top-nav__link">分享</a>
+      </nav>
+      <div class="top-nav__theme">
+          <div class="theme-selector">
+            <button id="theme-toggle" class="theme-toggle">
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__text">切换主题</span>
+              <span class="theme-toggle__arrow">▼</span>
+            </button>
+            <div class="theme-dropdown" id="theme-dropdown">
+              <div class="theme-option" data-theme="">
+                <span class="theme-option__icon">🌞</span>
+                <span class="theme-option__text">简约主题</span>
+              </div>
+              <div class="theme-option" data-theme="theme-day">
+                <span class="theme-option__icon">☀️</span>
+                <span class="theme-option__text">白天主题</span>
+              </div>
+              <div class="theme-option" data-theme="theme-night">
+                <span class="theme-option__icon">🌙</span>
+                <span class="theme-option__text">黑夜主题</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="top-nav__clock" id="nav-clock">--</div>
+    </header>
+
+    <main class="layout-home">
+      <section class="layout-home__left">
+        <section class="panel panel--soft">
+          <h1 class="panel__title" data-i18n="space.greeting">你好，我是 <span class="text-accent">Harlan</span></h1>
+          <p class="panel__subtitle" data-i18n="space.subtitle">
+            一名快速成长的大三学生，同时也是一位热爱AI的小白创作者，正在把生活中的灵感变成可以被触摸的作品。
+          </p>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title" data-i18n="space.education">教育背景</h2>
+            <span class="panel__hint" data-i18n="space.educationHint">南昌大学（211、双一流）</span>
+          </div>
+          <div class="education">
+            <div class="education__item">
+              <h3 class="education__institution" data-i18n="space.institution">南昌大学·经济管理学院</h3>
+              <p class="education__meta">工业工程专业 · 2023.09-至今</p>
+              <div class="education__details">
+                <p><strong data-i18n="space.majorCourses">主修课程:</strong> 统计学、概率论、python程序设计、管理经济学、管理学、运筹学、管理信息系统、人因工程等</p>
+                <p><strong data-i18n="space.awards">获奖荣誉:</strong> 校级一等优秀学生奖学金、校级三好学生、优秀共青团员、优秀学生干部、社会实践先进个人</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title" data-i18n="space.internship">实习经历</h2>
+            <span class="panel__hint" data-i18n="space.internshipHint">炫图（广州）人工智能科技有限公司</span>
+          </div>
+          <div class="experience">
+            <div class="experience__item">
+              <h3 class="experience__company" data-i18n="space.company">炫图AI</h3>
+              <p class="experience__meta">产品运营 · 2025.05-至今</p>
+              <div class="experience__details">
+                <p><strong>产品概述:</strong> 新一代全AI驱动的图像编辑工具及图片爆改二创互动社区，拥有强大的AI生成式修图能力。</p>
+                <p><strong>用户增长与内容运营:</strong> 制定国内外新媒体矩阵内容策略，跑通录屏类爆款内容制作SOP，主导核心内容产出。</p>
+                <p><strong>产品功能优化:</strong> 主导设计并优化AI图像模板，完成Prompt工程调优、素材筛选与效果测试，参与限免模板策略AB测试。</p>
+                <p><strong>社区冷启动:</strong> 深度参与社区从0到1的冷启动阶段，挖掘核心场景，产出种子内容，构建社区内容基础框架。</p>
+                <p><strong>团队管理:</strong> 晋升为团队负责人，带领国内运营小组及海外运营大组，负责任务分发、质量把控与跨团队协作。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title">项目经历</h2>
+            <span class="panel__hint">AI应用开发与创业项目</span>
+          </div>
+          <div class="projects">
+            <div class="projects__item">
+              <h3 class="projects__title">豆包-应用生成「一点都不技术」创作挑战赛—银奖</h3>
+              <p class="projects__meta">项目独立开发者 · 2025.11-2025.12</p>
+              <div class="projects__details">
+                <p><strong>项目简介:</strong> 针对职场黑话难懂、表达场景适配难等痛点，独立开发《言形—AI语言风格转换工具》，实现常见双向语言风格切换场景。</p>
+                <p><strong>需求挖掘与迭代:</strong> 聚焦职场黑话、古文等场景痛点，结合用户反馈完成Prompt工程调优，实现产品从单一工具到全场景解决方案的迭代。</p>
+                <p><strong>AI开发落地:</strong> 依托豆包-应用生成平台，运用提示词工程驱动前端界面设计，核心功能通过调用大模型API，采用流式输出技术提升响应速度。</p>
+                <p><strong>产品价值:</strong> 以极简架构降低使用门槛，实现复杂内容译白话、日常语场景化包装等核心功能，从众多投稿作品中脱颖而出。</p>
+              </div>
+            </div>
+            <div class="projects__item">
+              <h3 class="projects__title">美团NoCode"AI校园创造营"—优秀作品奖</h3>
+              <p class="projects__meta">项目独立开发者 · 2025.09-2025.10</p>
+              <div class="projects__details">
+                <p><strong>项目背景:</strong> 针对校园中"拼单难、交友场景有限"的痛点，使用美团NoCode平台独立构思并设计了一款专注于校园场景的轻社交互助平台—《WePin（微拼）》。</p>
+                <p><strong>AI产品设计与开发:</strong> 独立完成校园轻社交产品的开发与部署，通过Prompt迭代优化界面与功能，实现基于邮箱的用户登录系统、订单创建及参与逻辑构建。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title">技能证书</h2>
+            <span class="panel__hint">专业技能与竞赛奖项</span>
+          </div>
+          <div class="skills-certificates">
+            <div class="skills-certificates__section">
+              <h3 class="skills-certificates__title">专业技能</h3>
+              <div class="skills-certificates__content">
+                <div class="skills-certificates__tags">
+                  <span class="tag">SQL</span>
+                  <span class="tag">Excel</span>
+                  <span class="tag">Figma</span>
+                  <span class="tag">Xmind</span>
+                  <span class="tag">飞书多维表格</span>
+                  <span class="tag">AI工具应用</span>
+                  <span class="tag">Prompt Engineering</span>
+                  <span class="tag">Vibe Coding</span>
+                  <span class="tag">AI绘画</span>
+                  <span class="tag">剪映</span>
+                  <span class="tag">低代码开发</span>
+                  <span class="tag">n8n</span>
+                  <span class="tag">扣子Agent</span>
+                  <span class="tag">工作流搭建</span>
+                  <span class="tag">PRD撰写</span>
+                  <span class="tag">需求分析</span>
+                  <span class="tag">用户调研</span>
+                </div>
+              </div>
+            </div>
+            <div class="skills-certificates__section">
+              <h3 class="skills-certificates__title">竞赛奖项</h3>
+              <div class="skills-certificates__content">
+                <ul class="skills-certificates__list">
+                  <li>全国企业竞争模拟大赛企业运营赛道国家级二等奖</li>
+                  <li>中国大学生工程实践与创新能力大赛企业运营仿真赛道省部级二等奖</li>
+                  <li>学创杯”全国大学生创业综合模拟大赛创业综合模拟赛项省部级三等奖</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title">空间导览</h2>
+            <span class="panel__hint">选择一个角落开始探索</span>
+          </div>
+          <div class="card-grid card-grid--3">
+            <a href="works.html" class="card card--primary">
+              <div class="card__label">Works</div>
+              <h3 class="card__title">作品集</h3>
+              <p class="card__meta">应用 / 视频 / 影像 / 视觉</p>
+              <span class="card__action">进入作品区 →</span>
+            </a>
+            <a href="certificates.html" class="card">
+              <div class="card__label">Milestones</div>
+              <h3 class="card__title">证书与荣誉</h3>
+              <p class="card__meta">奖学金 / 竞赛 / 实践经历</p>
+              <span class="card__action">查看成就 →</span>
+            </a>
+            <a href="share.html" class="card">
+              <div class="card__label">Notebook</div>
+              <h3 class="card__title">分享与思考</h3>
+              <p class="card__meta">工具清单 / 学习路径 / 笔记</p>
+              <span class="card__action">走进脑洞 →</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title">自我评价</h2>
+            <span class="panel__hint">个人特质与职业优势</span>
+          </div>
+          <div class="self-evaluation">
+            <p>善于进取，学习能力和抗压能力强，善于观察和沟通协作，能够适应快节奏的工作环境。同时善于洞察用户需求，并且在高速变化的AI行业中，能快速掌握新工具与方法，具备带领跨地域团队完成目标的经验。</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title" data-i18n="space.skills">技能地图</h2>
+            <span class="panel__hint" data-i18n="space.skillsHint">我正在学习和实践的技术与工具，持续更新中。</span>
+          </div>
+          <div class="skills">
+            <div class="skills__group">
+              <span class="skills__label">数据</span>
+              <div class="skills__tags">
+                <span class="tag">SQL</span>
+                <span class="tag">Excel</span>
+                <span class="tag">数据分析</span>
+                <span class="tag">飞书多维表格</span>
+              </div>
+            </div>
+            <div class="skills__group">
+              <span class="skills__label">设计</span>
+              <div class="skills__tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Xmind</span>
+                <span class="tag">UI设计</span>
+                <span class="tag">AI绘画</span>
+              </div>
+            </div>
+            <div class="skills__group">
+              <span class="skills__label">AI工具</span>
+              <div class="skills__tags">
+                <span class="tag">Prompt Engineering</span>
+                <span class="tag">Vibe Coding</span>
+                <span class="tag">AI工具应用</span>
+                <span class="tag">扣子Agent</span>
+              </div>
+            </div>
+            <div class="skills__group">
+              <span class="skills__label">开发</span>
+              <div class="skills__tags">
+                <span class="tag">低代码开发</span>
+                <span class="tag">n8n</span>
+                <span class="tag">工作流搭建</span>
+              </div>
+            </div>
+            <div class="skills__group">
+              <span class="skills__label">产品</span>
+              <div class="skills__tags">
+                <span class="tag">PRD撰写</span>
+                <span class="tag">需求分析</span>
+                <span class="tag">用户调研</span>
+              </div>
+            </div>
+            <div class="skills__group">
+              <span class="skills__label">创作</span>
+              <div class="skills__tags">
+                <span class="tag">剪映</span>
+                <span class="tag">PS</span>
+                <span class="tag">即梦AI</span>
+                <span class="tag">Lovart</span>
+                <span class="tag">Midjourney</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <aside class="layout-home__right">
+        <section class="panel panel--profile">
+          <div class="profile">
+            <div class="profile__avatar">
+              <!-- 换成你的头像图片：background-image:url('你的图片路径') -->
+              <div class="profile__avatar-inner" style="background-image: url('images/avatar.jpg'); background-size: cover; background-position: center; color: transparent;">H</div>
+            </div>
+            <div class="profile__info">
+              <h2 class="profile__name">Harlan</h2>
+              <p class="profile__tagline">「善于进取，学习和抗压能力强，善于观察和沟通协作」</p>
+              <div class="profile__tags">
+                <span class="chip">AIGC</span>
+                <span class="chip">INFJ</span>
+                <span class="chip">双子座</span>
+                <span class="chip">领导力</span>
+                <span class="chip">执行力</span>
+                <span class="chip">专注力</span>
+                <span class="chip">网感</span>
+                <span class="chip">创意</span>
+                <span class="chip">冲浪达人</span>
+                <span class="chip">完美主义者</span>
+              </div>
+            </div>
+          </div>
+          <dl class="profile__meta">
+            <div class="profile__meta-row">
+              <dt>出生年月</dt>
+              <dd>2005年5月</dd>
+            </div>
+            <div class="profile__meta-row">
+              <dt>政治面貌</dt>
+              <dd>中共预备党员</dd>
+            </div>
+            <div class="profile__meta-row">
+              <dt>所在城市</dt>
+              <dd>南昌，中国</dd>
+            </div>
+            <div class="profile__meta-row">
+              <dt>邮箱</dt>
+              <dd><a href="mailto:17507095936@163.com">17507095936@163.com</a></dd>
+            </div>
+            <div class="profile__meta-row">
+              <dt>联系方式</dt>
+              <dd class="profile__links">
+                <a href="https://github.com/Harlan-han" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="javascript:void(0)" onclick="showQRCode('QQ')">QQ</a>
+                <a href="javascript:void(0)" onclick="showQRCode('WeChat')">WeChat</a>
+              </dd>
+            </div>
+            <div class="profile__meta-row">
+              <dt>求职意向</dt>
+              <dd>产品经理、产品策划、产品运营</dd>
+            </div>
+          </dl>
+
+          <!-- 二维码弹窗 -->
+          <div id="qrcodeModal" class="modal" style="display: none;">
+            <div class="modal-content">
+              <span class="close" onclick="closeQRCode()">&times;</span>
+              <div class="qrcode-container">
+                <img id="qrcodeImage" src="" alt="QR Code">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title">兴趣爱好</h2>
+            <span class="panel__hint">工作之外的精彩生活</span>
+          </div>
+          <div class="hobbies">
+            <div class="hobbies__item">
+              <span class="hobbies__icon">📚</span>
+              <span class="hobbies__name">阅读</span>
+              <span class="hobbies__desc">科技、心理学、哲学、小说</span>
+            </div>
+            <div class="hobbies__item">
+              <span class="hobbies__icon">🎮</span>
+              <span class="hobbies__name">游戏</span>
+              <span class="hobbies__desc">角色扮演、策略类、MOBA、FPS</span>
+            </div>
+            <div class="hobbies__item">
+              <span class="hobbies__icon">🎨</span>
+              <span class="hobbies__name">创作</span>
+              <span class="hobbies__desc">AI绘画、设计、短视频、摄影</span>
+            </div>
+            <div class="hobbies__item">
+              <span class="hobbies__icon">🏃</span>
+              <span class="hobbies__name">运动</span>
+              <span class="hobbies__desc">健身、篮球、登山、徒步、冲浪</span>
+            </div>
+            <div class="hobbies__item">
+              <span class="hobbies__icon">🤖</span>
+              <span class="hobbies__name">AI探索</span>
+              <span class="hobbies__desc">AI Coding、AI绘画、AI视频、Prompt工程</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title">生活瞬间</h2>
+            <span class="panel__hint">记录美好时光</span>
+          </div>
+          <div class="life-gallery">
+            <div class="life-gallery__item" style="background-image: url('images/life-photo-1.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="life-gallery__item" style="background-image: url('images/life-photo-2.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="life-gallery__item" style="background-image: url('images/life-photo-3.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="life-gallery__item" style="background-image: url('images/life-photo-4.jpg'); background-size: cover; background-position: center;"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header-row">
+            <h2 class="panel__title">成长轨迹</h2>
+            <span class="panel__hint">一路走来的重要时刻</span>
+          </div>
+          <div class="timeline">
+            <div class="timeline__item">
+              <div class="timeline__year">2023</div>
+              <div class="timeline__content">
+                <h4 class="timeline__title">进入南昌大学</h4>
+                <p class="timeline__desc">就读工业工程专业，担任班级学习委员、心理委员，开启大学生活</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__year">2024</div>
+              <div class="timeline__content">
+                <h4 class="timeline__title">大学二年级</h4>
+                <p class="timeline__desc">获得校级一等优秀学生奖学金，担任班级团支部书记、学生科学技术协会部长，暑期参加社会实践，开始接触AI产品开发</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__year">2025</div>
+              <div class="timeline__content">
+                <h4 class="timeline__title">美团NoCode创造营</h4>
+                <p class="timeline__desc">开发《WePin—校园轻社交互助平台》，获得优秀作品奖</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__year">2025</div>
+              <div class="timeline__content">
+                <h4 class="timeline__title">豆包创作挑战赛银奖</h4>
+                <p class="timeline__desc">独立开发《言形—AI语言风格转换工具》，获得豆包-应用生成创作挑战赛银奖</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__year">2025</div>
+              <div class="timeline__content">
+                <h4 class="timeline__title">产品运营实习</h4>
+                <p class="timeline__desc">加入炫图AI，负责AI产品运营与团队管理，后晋升为团队负责人</p>
+              </div>
+            </div>
+            <div class="timeline__item timeline__item--future">
+              <div class="timeline__year">未来</div>
+              <div class="timeline__content">
+                <h4 class="timeline__title">未完待续...</h4>
+                <p class="timeline__desc">一直在路上，持续探索AI的无限可能</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline__footer">
+            <p class="timeline__motto">"道阻且长，行则将至；行而不辍，未来可期。"</p>
+            <p class="timeline__note">每一步都算数，每一个挑战都是成长的机会。<br>保持好奇，保持热爱，下一个精彩正在路上。</p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <span>@2026 Harlan. Developed entirely with Cursor & Trae, taking two days in total and continuously updating.</span>
+    </footer>
+  </div>
+
+  <script src="main.js" defer></script>
+    <script>
+      // 显示二维码弹窗
+      function showQRCode(type) {
+        const modal = document.getElementById('qrcodeModal');
+        const qrcodeImage = document.getElementById('qrcodeImage');
+        
+        // 根据类型设置二维码图片路径
+        if (type === 'QQ') {
+          qrcodeImage.src = 'images/QQ.jpg';
+        } else if (type === 'WeChat') {
+          qrcodeImage.src = 'images/Wechat.jpg';
+        }
+        
+        // 显示弹窗
+        modal.style.display = 'flex';
+      }
+      
+      // 关闭二维码弹窗
+      function closeQRCode() {
+        const modal = document.getElementById('qrcodeModal');
+        modal.style.display = 'none';
+      }
+      
+      // 点击弹窗外部关闭
+      window.onclick = function(event) {
+        const modal = document.getElementById('qrcodeModal');
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+    </script>
+  </body>
+</html>
+

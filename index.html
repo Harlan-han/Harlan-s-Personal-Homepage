@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harlan的个人空间</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body class="theme-scandi">
+  <div class="splash">
+    <div class="splash__bg"></div>
+    <header class="splash__header">
+      <span class="splash__logo-dot"></span>
+      <div class="splash__theme">
+        <div class="theme-selector">
+          <button id="theme-toggle" class="theme-toggle">
+            <span class="theme-toggle__icon">🌙</span>
+            <span class="theme-toggle__text">切换主题</span>
+            <span class="theme-toggle__arrow">▼</span>
+          </button>
+          <div class="theme-dropdown" id="theme-dropdown">
+            <div class="theme-option" data-theme="">
+              <span class="theme-option__icon">🌞</span>
+              <span class="theme-option__text">简约主题</span>
+            </div>
+            <div class="theme-option" data-theme="theme-day">
+              <span class="theme-option__icon">☀️</span>
+              <span class="theme-option__text">白天主题</span>
+            </div>
+            <div class="theme-option" data-theme="theme-night">
+              <span class="theme-option__icon">🌙</span>
+              <span class="theme-option__text">黑夜主题</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="splash__content">
+      <div class="splash__avatar">
+        <!-- 这里可以换成你的头像图片：把背景改成 background-image:url('你的图片路径') -->
+        <div class="splash__avatar-inner" style="background-image: url('images/avatar.jpg'); background-size: cover; background-position: center; color: transparent;">H</div>
+      </div>
+
+      <h1 class="splash__title" data-i18n="index.title">欢迎来到Harlan的小宇宙</h1>
+      <div class="splash__quote-container" id="quote-container">
+        <p class="splash__quote" id="quote-text" data-i18n="index.quote">
+          A calm, bright corner of the internet – curated by Harlan.
+        </p>
+      </div>
+
+      <div class="splash__clock" id="welcome-clock">
+        <!-- JS 会自动填充当前时间 -->
+        --
+      </div>
+
+      <a href="space.html" class="btn btn--primary splash__button">
+        <span data-i18n="index.enter">进入我的世界</span>
+        <span class="btn__icon">→</span>
+      </a>
+    </main>
+
+    <footer class="splash__footer">
+      <span>按下「进入我的世界」，开始探索。</span>
+    </footer>
+  </div>
+
+  <script src="main.js" defer></script>
+  <script>
+    // 励志佳句数组（中英文对照）
+    const quotes = [
+      { cn: "道阻且长，行则将至；行而不辍，未来可期。", en: "The road ahead is long and winding, but we will reach our destination if we keep moving forward." },
+      { cn: "生活不是等待暴风雨过去，而是要学会在雨中跳舞。", en: "Life isn't about waiting for the storm to pass, it's about learning to dance in the rain." },
+      { cn: "每一个清晨都是新的开始，每一个黄昏都是新的收获。", en: "Every morning is a new beginning, every evening is a new harvest." },
+      { cn: "心若向阳，无畏悲伤；梦在远方，路在脚下。", en: "If your heart faces the sun, you fear no sorrow; if your dream is in the distance, the road is beneath your feet." },
+      { cn: "不是看到希望才坚持，而是坚持了才看到希望。", en: "It's not that we see hope before we persist, but that we see hope because we persist." },
+      { cn: "生命中最美好的事，往往是那些最不期而遇的惊喜。", en: "The best things in life are often those unexpected surprises." },
+      { cn: "你的态度决定你的高度，你的行动决定你的成就。", en: "Your attitude determines your altitude, your actions determine your achievements." },
+      { cn: "不要让昨天的遗憾，影响今天的选择；不要让明天的担忧，干扰今天的快乐。", en: "Don't let yesterday's regrets affect today's choices; don't let tomorrow's worries interfere with today's happiness." },
+      { cn: "成功不是终点，失败也不是末日，最重要的是继续前进的勇气。", en: "Success is not final, failure is not fatal: it is the courage to continue that counts." },
+      { cn: "人生如逆旅，我亦是行人。", en: "Life is like a journey against the current, and I am just a traveler." }
+    ];
+
+    let currentQuoteIndex = -1;
+    let quoteInterval;
+
+    // 获取随机的句子索引，确保不重复
+    function getRandomQuoteIndex() {
+      let randomIndex;
+      do {
+        randomIndex = Math.floor(Math.random() * quotes.length);
+      } while (randomIndex === currentQuoteIndex);
+      return randomIndex;
+    }
+
+    // 显示新的句子
+    function showNewQuote() {
+      const quoteElement = document.getElementById('quote-text');
+      const containerElement = document.getElementById('quote-container');
+      
+      // 添加淡出动画
+      quoteElement.classList.add('fade-out');
+      
+      // 动画结束后更新内容
+      setTimeout(() => {
+        currentQuoteIndex = getRandomQuoteIndex();
+        const quote = quotes[currentQuoteIndex];
+        
+        // 随机选择显示中文或英文
+        const isChinese = Math.random() > 0.5;
+        quoteElement.textContent = isChinese ? quote.cn : quote.en;
+        
+        // 添加淡入动画
+        quoteElement.classList.remove('fade-out');
+        quoteElement.classList.add('fade-in');
+        
+        // 动画结束后移除类
+        setTimeout(() => {
+          quoteElement.classList.remove('fade-in');
+        }, 800);
+      }, 500);
+    }
+
+    // 初始化
+    function initQuotes() {
+      // 初始显示一句
+      showNewQuote();
+      
+      // 设置自动刷新间隔（10秒）
+      quoteInterval = setInterval(showNewQuote, 10000);
+      
+      // 添加点击刷新事件
+      const containerElement = document.getElementById('quote-container');
+      containerElement.addEventListener('click', showNewQuote);
+    }
+
+    // 页面加载完成后初始化
+    window.addEventListener('DOMContentLoaded', initQuotes);
+  </script>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>证书与荣誉 · Harlan的个人空间</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-scandi">
+  <div class="app-shell app-shell--inner">
+    <header class="top-nav">
+      <a class="top-nav__brand" href="index.html">
+        <span class="top-nav__logo-dot"></span>
+        <span class="top-nav__logo-text">My Space</span>
+      </a>
+      <nav class="top-nav__links">
+        <a href="space.html" class="top-nav__link">首页</a>
+        <a href="works.html" class="top-nav__link">作品</a>
+        <a href="certificates.html" class="top-nav__link top-nav__link--active">证书</a>
+        <a href="share.html" class="top-nav__link">分享</a>
+      </nav>
+      <div class="top-nav__theme">
+          <div class="theme-selector">
+            <button id="theme-toggle" class="theme-toggle">
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__text">切换主题</span>
+              <span class="theme-toggle__arrow">▼</span>
+            </button>
+            <div class="theme-dropdown" id="theme-dropdown">
+              <div class="theme-option" data-theme="">
+                <span class="theme-option__icon">🌞</span>
+                <span class="theme-option__text">简约主题</span>
+              </div>
+              <div class="theme-option" data-theme="theme-day">
+                <span class="theme-option__icon">☀️</span>
+                <span class="theme-option__text">白天主题</span>
+              </div>
+              <div class="theme-option" data-theme="theme-night">
+                <span class="theme-option__icon">🌙</span>
+                <span class="theme-option__text">黑夜主题</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="top-nav__clock" id="nav-clock">--</div>
+    </header>
+
+    <main class="page">
+      <header class="page-header">
+        <div>
+          <h1 class="page-header__title" data-i18n="certificates.title">证书与荣誉</h1>
+          <p class="page-header__subtitle" data-i18n="certificates.subtitle">
+            用一种克制的方式，安静地陈列每一段被认可的努力。
+          </p>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title" data-i18n="certificates.scholarships">奖学金</h2>
+          <p class="section__hint" data-i18n="certificates.scholarshipsHint">记录我在长期积累中的稳定表现。</p>
+        </div>
+        <div class="card-grid card-grid--2">
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">校级一等优秀学生奖学金</h3>
+              <p class="card__meta">南昌大学 · 2024</p>
+              <p class="card__desc">
+                基于优异的学术成绩和全面的综合素质获得的校级最高奖学金。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/first-class-scholarship-2023-2024.png')" class="card__link">查看证明 →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title" data-i18n="certificates.competitions">竞赛证书</h2>
+          <p class="section__hint" data-i18n="certificates.competitionsHint">展现我在高压场景下的创造力与执行力。</p>
+        </div>
+        <div class="card-grid card-grid--2">
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">全国企业竞争模拟大赛企业运营赛道国家级二等奖</h3>
+              <p class="card__meta">中国企业管理研究会 · 2024</p>
+              <p class="card__desc">
+                在全国企业竞争模拟大赛中，通过模拟企业运营决策，展现了出色的战略规划和团队协作能力，获得国家级二等奖。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/second-prize-competition-2025.png')" class="card__link">查看证书扫描件 →</a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">中国大学生工程实践与创新能力大赛企业运营仿真赛道省部级二等奖</h3>
+              <p class="card__meta">教育部 · 2024</p>
+              <p class="card__desc">
+                在企业运营仿真赛道中，通过模拟企业运营管理，展现了扎实的专业知识和实践能力，获得省部级二等奖。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/second-prize-provincial.jpg')" class="card__link">查看证书扫描件 →</a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">学创杯"全国大学生创业综合模拟大赛创业综合模拟赛项省部级三等奖</h3>
+              <p class="card__meta">教育部 · 2024</p>
+              <p class="card__desc">
+                在创业综合模拟赛项中，通过模拟创业过程，展现了创新思维和创业能力，获得省部级三等奖。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/third-prize-provincial.png')" class="card__link">查看证书扫描件 →</a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">美团NoCode AI校园创造营优秀作品奖</h3>
+              <p class="card__meta">美团 · 2025</p>
+              <p class="card__desc">
+                在美团NoCode AI校园创造营中，通过使用NoCode平台开发校园轻社交产品，获得优秀作品奖。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/meituan-nocode-award.jpeg')" class="card__link">查看证书扫描件 →</a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">豆包-应用生成创作挑战赛-创作新星奖</h3>
+              <p class="card__meta">豆包 · 2025</p>
+              <p class="card__desc">
+                在豆包-应用生成创作挑战赛中，通过开发AI语言风格转换工具，获得创作新星奖。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/doubao-award.jpg')" class="card__link">查看证书扫描件 →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title">实践 & 实习经历</h2>
+          <p class="section__hint">把「做过什么」翻译成「能带来什么价值」。</p>
+        </div>
+        <div class="card-grid card-grid--2">
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">产品运营</h3>
+              <p class="card__meta">炫图（广州）人工智能科技有限公司—炫图AI · 2025.05-至今</p>
+              <p class="card__desc">
+                负责产品运营工作，包括用户增长与内容运营、产品功能协同与优化、社区0到1冷启动以及团队领导与规模化管理，实现了显著的用户增长和产品功能优化。
+              </p>
+            </div>
+          </article>
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">公安局实习</h3>
+              <p class="card__meta">公安局 · 2024.07-2024.08</p>
+              <p class="card__desc">
+                在公安局进行实习，参与了相关工作，获得了宝贵的实践经验。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/internship-certificate-police-2024.png')" class="card__link">查看证明 →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title" data-i18n="certificates.others">荣誉称号</h2>
+          <p class="section__hint" data-i18n="certificates.othersHint">那些被贴在我身上的标签，也是一种外部视角。</p>
+        </div>
+        <div class="card-grid card-grid--2">
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">校级三好学生</h3>
+              <p class="card__meta">南昌大学 · 2024</p>
+              <p class="card__desc">
+                基于优异的学习成绩和全面的综合素质，被评为校级三好学生。
+              </p>
+            </div>
+          </article>
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">优秀共青团员</h3>
+              <p class="card__meta">南昌大学 · 2024</p>
+              <p class="card__desc">
+                基于积极的思想政治表现和优秀的团务工作，被评为优秀共青团员。
+              </p>
+            </div>
+          </article>
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">优秀学生干部</h3>
+              <p class="card__meta">南昌大学 · 2024</p>
+              <p class="card__desc">
+                基于出色的学生工作表现和服务意识，被评为优秀学生干部。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/excellent-student-cadre-2023-2024.png')" class="card__link">查看证明 →</a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">社会实践先进个人</h3>
+              <p class="card__meta">南昌大学 · 2024</p>
+              <p class="card__desc">
+                基于在社会实践活动中的突出表现和贡献，被评为社会实践先进个人。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/advanced-individual-summer.png')" class="card__link">查看证明 →</a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--cert">
+            <div class="card__body">
+              <h3 class="card__title">返家乡社会实践优秀个人</h3>
+              <p class="card__meta">南昌大学 · 2024</p>
+              <p class="card__desc">
+                基于在返家乡社会实践活动中的突出表现和贡献，被评为返家乡社会实践优秀个人。
+              </p>
+              <div class="card__footer">
+                <a href="javascript:void(0)" onclick="showCertificateModal('images/advanced-individual-hometown.png')" class="card__link">查看证明 →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>这些证书只是我故事的一部分，而不是全部。</span>
+    </footer>
+  </div>
+
+  <!-- 证书图片弹窗 -->
+  <div id="certificateModal" class="modal" style="display: none;">
+    <div class="modal-content modal-content--certificate">
+      <span class="close" onclick="closeCertificateModal()">&times;</span>
+      <div class="certificate-container">
+        <img id="certificateImage" src="" alt="证书图片">
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js" defer></script>
+    <script>
+      // 显示证书图片弹窗
+      function showCertificateModal(imageSrc) {
+        const modal = document.getElementById('certificateModal');
+        const certificateImage = document.getElementById('certificateImage');
+        
+        // 设置证书图片路径
+        certificateImage.src = imageSrc;
+        
+        // 显示弹窗
+        modal.style.display = 'flex';
+      }
+      
+      // 关闭证书图片弹窗
+      function closeCertificateModal() {
+        const modal = document.getElementById('certificateModal');
+        modal.style.display = 'none';
+      }
+      
+      // 点击弹窗外部关闭
+      window.onclick = function(event) {
+        const modal = document.getElementById('certificateModal');
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+    </script>
+</body>
+</html>

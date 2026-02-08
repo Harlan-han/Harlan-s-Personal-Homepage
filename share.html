@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>分享与工具 · Harlan的个人空间</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-scandi">
+  <div class="app-shell app-shell--inner">
+    <header class="top-nav">
+      <a class="top-nav__brand" href="index.html">
+        <span class="top-nav__logo-dot"></span>
+        <span class="top-nav__logo-text">My Space</span>
+      </a>
+      <nav class="top-nav__links">
+        <a href="space.html" class="top-nav__link">首页</a>
+        <a href="works.html" class="top-nav__link">作品</a>
+        <a href="certificates.html" class="top-nav__link">证书</a>
+        <a href="share.html" class="top-nav__link top-nav__link--active">分享</a>
+      </nav>
+      <div class="top-nav__theme">
+          <div class="theme-selector">
+            <button id="theme-toggle" class="theme-toggle">
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__text">切换主题</span>
+              <span class="theme-toggle__arrow">▼</span>
+            </button>
+            <div class="theme-dropdown" id="theme-dropdown">
+              <div class="theme-option" data-theme="">
+                <span class="theme-option__icon">🌞</span>
+                <span class="theme-option__text">简约主题</span>
+              </div>
+              <div class="theme-option" data-theme="theme-day">
+                <span class="theme-option__icon">☀️</span>
+                <span class="theme-option__text">白天主题</span>
+              </div>
+              <div class="theme-option" data-theme="theme-night">
+                <span class="theme-option__icon">🌙</span>
+                <span class="theme-option__text">黑夜主题</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="top-nav__clock" id="nav-clock">--</div>
+    </header>
+
+    <main class="page">
+      <header class="page-header">
+        <div>
+          <h1 class="page-header__title" data-i18n="share.title">分享与工具</h1>
+          <p class="page-header__subtitle" data-i18n="share.subtitle">
+            这里是我的数字抽屉，放一些好用的工具、走过的学习路径和值得反复翻看的内容。
+          </p>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title" data-i18n="share.tools">常用工具清单</h2>
+          <p class="section__hint" data-i18n="share.toolsHint">把我的生产力系统摊开给别人看。</p>
+        </div>
+        <div class="card-slider-container">
+          <div class="card-slider">
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Trae</h3>
+                <p class="card__meta">AI编程 · 跨平台</p>
+                <p class="card__desc">
+                  强大的AI编程助手，支持多种编程语言和框架，是我日常开发的主要工具。
+                </p>
+                <div class="card__footer">
+                  <a href="https://trae.ai" target="_blank" rel="noreferrer" class="card__link">访问官网 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Cursor</h3>
+                <p class="card__meta">AI编程 · 跨平台</p>
+                <p class="card__desc">
+                  基于AI的代码编辑器，智能代码补全和生成，提升开发效率。
+                </p>
+                <div class="card__footer">
+                  <a href="https://cursor.sh" target="_blank" rel="noreferrer" class="card__link">访问官网 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Github</h3>
+                <p class="card__meta">代码托管 · 跨平台</p>
+                <p class="card__desc">
+                  全球最大的代码托管平台，支持版本控制和协作开发，是我开源项目和代码管理的主要工具。
+                </p>
+                <div class="card__footer">
+                  <a href="https://github.com" target="_blank" rel="noreferrer" class="card__link">访问官网 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">飞书</h3>
+                <p class="card__meta">协作工具 · 跨平台</p>
+                <p class="card__desc">
+                  企业级协作平台，支持即时通讯、文档协作、视频会议等功能，是我团队协作的主要工具。
+                </p>
+                <div class="card__footer">
+                  <a href="https://www.feishu.cn" target="_blank" rel="noreferrer" class="card__link">访问官网 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Midjourney</h3>
+                <p class="card__meta">AI绘画 · 云端</p>
+                <p class="card__desc">
+                  强大的AI图像生成工具，通过文字描述生成高质量图像，是我AI创作的主要工具。
+                </p>
+                <div class="card__footer">
+                  <a href="https://www.midjourney.com" target="_blank" rel="noreferrer" class="card__link">访问官网 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Figma</h3>
+                <p class="card__meta">UI设计 · 云端</p>
+                <p class="card__desc">
+                  协作式UI设计工具，支持实时团队协作，界面简洁直观，是我设计用户界面的首选工具。
+                </p>
+                <div class="card__footer">
+                  <a href="https://figma.com" target="_blank" rel="noreferrer" class="card__link">访问官网 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Notion</h3>
+                <p class="card__meta">知识管理 · 跨平台</p>
+                <p class="card__desc">
+                  全能的知识管理工具，支持多种内容格式，帮助我组织和管理学习笔记、项目文档等。
+                </p>
+                <div class="card__footer">
+                  <a href="https://notion.so" target="_blank" rel="noreferrer" class="card__link">访问官网 →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title" data-i18n="share.learning">学习路径 & 推荐内容</h2>
+          <p class="section__hint" data-i18n="share.learningHint">不仅是资源列表，更是我自己的「学习路线图」。</p>
+        </div>
+        <div class="card-slider-container">
+          <div class="card-slider">
+            <article class="card card--note">
+              <div class="card__body">
+                <h3 class="card__title">🌈WaytoAGI | 通往AGI之路</h3>
+                <p class="card__meta">AI学习 · 知识库</p>
+                <p class="card__desc">
+                  致力于人工智能学习的知识库与社区平台，提供系统全面的AI学习路径，整合资源、组织实践活动。覆盖近900万学习者，知识库访问量超8000万次，联动180所高校及100+企业，举办500+场活动。
+                </p>
+                <div class="card__footer">
+                  <a href="https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e" target="_blank" rel="noreferrer" class="card__link">访问知识库 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card card--note">
+              <div class="card__body">
+                <h3 class="card__title">人人都是产品经理</h3>
+                <p class="card__meta">产品经理 · 学习平台</p>
+                <p class="card__desc">
+                  产品经理、产品爱好者学习交流平台，提供产品经理相关的学习资料、行业资讯、职业发展指导等内容，是产品经理进阶学习的重要资源。
+                </p>
+                <div class="card__footer">
+                  <a href="https://www.woshipm.com/" target="_blank" rel="noreferrer" class="card__link">访问官网 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card card--note">
+              <div class="card__body">
+                <h3 class="card__title">数字生命卡兹克</h3>
+                <p class="card__meta">公众号 · AI创作</p>
+                <p class="card__desc">
+                  AI领域知名公众号，主理人卡兹克凭借出色的AIGC应用和创新能力，成功吸引了大量关注。专注于AI工具应用、数字生命探索等内容，是AI创作者的重要学习资源。
+                </p>
+                <div class="card__footer">
+                  <a href="#" target="_blank" rel="noreferrer" class="card__link">关注公众号 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card card--note">
+              <div class="card__body">
+                <h3 class="card__title">极客公园</h3>
+                <p class="card__meta">公众号 · 科技媒体</p>
+                <p class="card__desc">
+                  中国创新者的大本营，成立于2010年。通过对前沿科技的观察报道、高水平的线下活动、众筹孵化等全方位的创业服务，汇聚了中国广大的创新、创业人群。
+                </p>
+                <div class="card__footer">
+                  <a href="#" target="_blank" rel="noreferrer" class="card__link">关注公众号 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card card--note">
+              <div class="card__body">
+                <h3 class="card__title">量子位</h3>
+                <p class="card__meta">公众号 · AI科技</p>
+                <p class="card__desc">
+                  关注AI及前沿科技的新媒体平台，着迷于全新技术和趋势带来的改变，帮助更多人第一时间看懂新趋势新机遇。是了解AI行业动态和技术发展的重要渠道。
+                </p>
+                <div class="card__footer">
+                  <a href="#" target="_blank" rel="noreferrer" class="card__link">关注公众号 →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <h2 class="section__title" data-i18n="share.thoughts">思考与随笔</h2>
+          <p class="section__hint" data-i18n="share.thoughtsHint">展示我的思考深度，而不仅是「做了什么」。</p>
+        </div>
+        <p style="text-align: center; color: rgba(126, 166, 200, 0.6); font-size: 1.1rem; padding: 2rem 0;">
+          Harlan的飞书个人知识库正在努力打造中，敬请期待！
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>持续更新，让这个页面成为我思考的时间线。</span>
+    </footer>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
