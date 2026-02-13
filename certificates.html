@@ -48,6 +48,36 @@
             </div>
           </div>
         </div>
+
+      <!-- 导航栏播放器 -->
+      <div class="music-player music-player--nav" id="nav-player">
+        <button class="music-player__btn music-player__btn--mini nav-prev-btn" title="上一首">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 6h2v12H6V6zm3.5 6l8.5 6V6l-8.5 6z"/>
+          </svg>
+        </button>
+        <div class="music-player__disk music-player__disk--nav">
+          <img class="music-player__cover nav-cover-img" src="music/Moments-Kidnap&Leo Stannard.jpg" alt="Album Cover">
+          <div class="music-player__center"></div>
+        </div>
+        <button class="music-player__btn music-player__btn--mini nav-play-btn" title="播放/暂停">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="nav-play-icon">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="nav-pause-icon" style="display: none;">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        </button>
+        <button class="music-player__btn music-player__btn--mini nav-next-btn" title="下一首">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+          </svg>
+        </button>
+        <div class="music-player__mini-info">
+          <span class="music-player__mini-title nav-song-title">Moments</span>
+        </div>
+      </div>
+
       <div class="top-nav__clock" id="nav-clock">--</div>
     </header>
 
@@ -283,6 +313,7 @@
   </div>
 
   <script src="main.js" defer></script>
+  <script src="music-player.js" defer></script>
     <script>
       // 显示证书图片弹窗
       function showCertificateModal(imageSrc) {

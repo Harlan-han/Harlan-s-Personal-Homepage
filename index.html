@@ -67,6 +67,36 @@
       </a>
     </main>
 
+    <!-- 开屏页播放器 - 右下角 -->
+    <div class="music-player music-player--splash" id="splash-player">
+      <button class="music-player__btn music-player__btn--prev" id="prev-btn" title="上一首">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 6h2v12H6V6zm3.5 6l8.5 6V6l-8.5 6z"/>
+        </svg>
+      </button>
+      <div class="music-player__disk">
+        <img class="music-player__cover" id="cover-img" src="music/Moments-Kidnap&Leo Stannard.jpg" alt="Album Cover">
+        <div class="music-player__center"></div>
+      </div>
+      <button class="music-player__btn music-player__btn--play" id="play-btn" title="播放/暂停">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" id="play-icon">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" id="pause-icon" style="display: none;">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </button>
+      <button class="music-player__btn music-player__btn--next" id="next-btn" title="下一首">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+        </svg>
+      </button>
+      <div class="music-player__song-info">
+        <span class="music-player__title" id="song-title">Moments</span>
+        <span class="music-player__artist" id="song-artist">Kidnap & Leo Stannard</span>
+      </div>
+    </div>
+
     <footer class="splash__footer">
       <span>按下「进入我的世界」，开始探索。</span>
     </footer>
@@ -145,7 +175,7 @@
     window.addEventListener('DOMContentLoaded', initQuotes);
   </script>
 
-  <script src="main.js" defer></script>
+  <script src="music-player.js" defer></script>
 </body>
 </html>
 

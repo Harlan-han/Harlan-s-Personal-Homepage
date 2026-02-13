@@ -48,6 +48,36 @@
             </div>
           </div>
         </div>
+
+      <!-- 首页导航栏播放器 -->
+      <div class="music-player music-player--nav" id="nav-player">
+        <button class="music-player__btn music-player__btn--mini" id="nav-prev-btn" title="上一首">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 6h2v12H6V6zm3.5 6l8.5 6V6l-8.5 6z"/>
+          </svg>
+        </button>
+        <div class="music-player__disk music-player__disk--nav">
+          <img class="music-player__cover" id="nav-cover-img" src="music/Moments-Kidnap&Leo Stannard.jpg" alt="Album Cover">
+          <div class="music-player__center"></div>
+        </div>
+        <button class="music-player__btn music-player__btn--mini" id="nav-play-btn" title="播放/暂停">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" id="nav-play-icon">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" id="nav-pause-icon" style="display: none;">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        </button>
+        <button class="music-player__btn music-player__btn--mini" id="nav-next-btn" title="下一首">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+          </svg>
+        </button>
+        <div class="music-player__mini-info">
+          <span class="music-player__mini-title" id="nav-song-title">Moments</span>
+        </div>
+      </div>
+
       <div class="top-nav__clock" id="nav-clock">--</div>
     </header>
 
@@ -151,6 +181,9 @@
                   <span class="tag">PRD撰写</span>
                   <span class="tag">需求分析</span>
                   <span class="tag">用户调研</span>
+                  <span class="tag">Cursor</span>
+                  <span class="tag">Trae</span>
+                  <span class="tag">CodeBuddy</span>
                 </div>
               </div>
             </div>
@@ -243,6 +276,9 @@
                 <span class="tag">低代码开发</span>
                 <span class="tag">n8n</span>
                 <span class="tag">工作流搭建</span>
+                <span class="tag">Cursor</span>
+                <span class="tag">Trae</span>
+                <span class="tag">CodeBuddy</span>
               </div>
             </div>
             <div class="skills__group">
@@ -443,7 +479,8 @@
   </div>
 
   <script src="main.js" defer></script>
-    <script>
+  <script src="music-player.js" defer></script>
+  <script>
       // 移动端布局调整:将个人信息板块移动到"你好"板块之后
       function adjustMobileLayout() {
         if (window.innerWidth <= 900) {

@@ -48,6 +48,36 @@
             </div>
           </div>
         </div>
+
+      <!-- 导航栏播放器 -->
+      <div class="music-player music-player--nav" id="nav-player">
+        <button class="music-player__btn music-player__btn--mini nav-prev-btn" title="上一首">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 6h2v12H6V6zm3.5 6l8.5 6V6l-8.5 6z"/>
+          </svg>
+        </button>
+        <div class="music-player__disk music-player__disk--nav">
+          <img class="music-player__cover nav-cover-img" src="music/Moments-Kidnap&Leo Stannard.jpg" alt="Album Cover">
+          <div class="music-player__center"></div>
+        </div>
+        <button class="music-player__btn music-player__btn--mini nav-play-btn" title="播放/暂停">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="nav-play-icon">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="nav-pause-icon" style="display: none;">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        </button>
+        <button class="music-player__btn music-player__btn--mini nav-next-btn" title="下一首">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+          </svg>
+        </button>
+        <div class="music-player__mini-info">
+          <span class="music-player__mini-title nav-song-title">Moments</span>
+        </div>
+      </div>
+
       <div class="top-nav__clock" id="nav-clock">--</div>
     </header>
 
@@ -232,9 +262,31 @@
           <h2 class="section__title" data-i18n="share.thoughts">思考与随笔</h2>
           <p class="section__hint" data-i18n="share.thoughtsHint">展示我的思考深度，而不仅是「做了什么」。</p>
         </div>
-        <p style="text-align: center; color: rgba(126, 166, 200, 0.6); font-size: 1.1rem; padding: 2rem 0;">
-          Harlan的飞书个人知识库正在努力打造中，敬请期待！
-        </p>
+        <div class="card-slider-container">
+          <div class="card-slider">
+            <article class="card card--note">
+              <div class="card__body">
+                <h3 class="card__title">Harlan的产品知识分享</h3>
+                <p class="card__meta">产品经理·知识库</p>
+                <p class="card__desc">
+                  分享自己学到的关于互联网产品的全体系知识，干货满满，持续更新ing！
+                </p>
+                <div class="card__footer">
+                  <a href="https://fcnnzvwldl63.feishu.cn/wiki/OrQhwF0faiW0JukXXmTcKX2Anfg?from=from_copylink" target="_blank" rel="noreferrer" class="card__link">访问知识库 →</a>
+                </div>
+              </div>
+            </article>
+            <article class="card card--note">
+              <div class="card__body">
+                <h3 class="card__title">Harlan的AIGC知识分享</h3>
+                <p class="card__meta">AI学习·知识库</p>
+                <p class="card__desc">
+                  Harlan的飞书个人AIGC知识库正在努力打造中，敬请期待！
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -244,5 +296,6 @@
   </div>
 
   <script src="main.js" defer></script>
+  <script src="music-player.js" defer></script>
 </body>
 </html>
