@@ -41,15 +41,24 @@ function restorePlayerState() {
     audio = new Audio(songs[currentSongIndex].src);
     audio.currentTime = currentTime;
 
-    // 如果之前在播放，则恢复播放
-    if (isPlaying) {
-      audio.play().catch(e => console.log('自动播放被阻止:', e));
-    }
+    // 设置自动播放尝试
+    audio.play().then(() => {
+      isPlaying = true;
+      updatePlayButtonsState(true);
+      startRotation();
+    }).catch(e => {
+      // 自动播放被浏览器阻止,这是正常的
+      console.log('自动播放被阻止,需要用户交互:', e);
+      isPlaying = false;
+      updatePlayButtonsState(false);
+      stopRotation();
+    });
 
     stateSaved = true;
   } else {
     // 初始化新的音频对象
     audio = new Audio(songs[currentSongIndex].src);
+    isPlaying = false;
   }
 }
 
@@ -65,6 +74,20 @@ function savePlayerState() {
   }
 }
 
+// 页面可见性变化时处理播放
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    // 页面重新可见时,尝试恢复播放
+    const savedState = localStorage.getItem('musicPlayerState');
+    if (savedState && audio) {
+      const state = JSON.parse(savedState);
+      if (state.isPlaying && audio.paused) {
+        audio.play().catch(e => console.log('恢复播放失败:', e));
+      }
+    }
+  }
+});
+
 // 切换歌曲
 function loadSong(index) {
   const wasPlaying = isPlaying;
@@ -75,6 +98,7 @@ function loadSong(index) {
 
   // 更新封面
   updateAllCovers(songs[index].cover);
+  updateNavCovers(songs[index].cover);
 
   // 更新歌曲信息显示
   updateAllPlayerDisplays(songs[index]);
@@ -84,7 +108,16 @@ function loadSong(index) {
 
   // 如果之前在播放，继续播放
   if (wasPlaying) {
-    audio.play();
+    audio.play().then(() => {
+      isPlaying = true;
+      updatePlayButtonsState(true);
+      startRotation();
+    }).catch(e => {
+      console.log('播放失败:', e);
+      isPlaying = false;
+      updatePlayButtonsState(false);
+      stopRotation();
+    });
   }
 }
 
@@ -98,6 +131,16 @@ function updateAllCovers(coverUrl) {
       } else {
         cover.style.backgroundImage = `url('${coverUrl}')`;
       }
+    }
+  });
+}
+
+// 更新导航栏播放器封面
+function updateNavCovers(coverUrl) {
+  const navCoverElements = document.querySelectorAll('#nav-cover-img');
+  navCoverElements.forEach(cover => {
+    if (cover) {
+      cover.src = coverUrl;
     }
   });
 }
@@ -120,11 +163,17 @@ function updateAllPlayerDisplays(song) {
 // 播放
 function playSong() {
   if (audio) {
-    audio.play();
-    isPlaying = true;
-    updatePlayButtonsState(true);
-    startRotation();
-    savePlayerState();
+    audio.play().then(() => {
+      isPlaying = true;
+      updatePlayButtonsState(true);
+      startRotation();
+      savePlayerState();
+    }).catch(e => {
+      console.log('播放失败:', e);
+      isPlaying = false;
+      updatePlayButtonsState(false);
+      stopRotation();
+    });
   }
 }
 
@@ -211,6 +260,7 @@ function initPlayer() {
   // 更新显示
   updateAllPlayerDisplays(songs[currentSongIndex]);
   updateAllCovers(songs[currentSongIndex].cover);
+  updateNavCovers(songs[currentSongIndex].cover);
   updatePlayButtonsState(isPlaying);
 
   if (isPlaying) {
@@ -236,9 +286,9 @@ function bindEvents() {
   if (nextBtn) nextBtn.addEventListener('click', nextSong);
 
   // 导航栏播放器事件 - 支持多个播放器
-  const navPlayBtns = document.querySelectorAll('.nav-play-btn');
-  const navPrevBtns = document.querySelectorAll('.nav-prev-btn');
-  const navNextBtns = document.querySelectorAll('.nav-next-btn');
+  const navPlayBtns = document.querySelectorAll('.nav-play-btn, #nav-play-btn');
+  const navPrevBtns = document.querySelectorAll('.nav-prev-btn, #nav-prev-btn');
+  const navNextBtns = document.querySelectorAll('.nav-next-btn, #nav-next-btn');
 
   navPlayBtns.forEach(btn => {
     if (btn) btn.addEventListener('click', togglePlay);
